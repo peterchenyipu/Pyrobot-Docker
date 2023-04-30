@@ -1,6 +1,10 @@
 # Docker for PyRobot and Locobot
 
 ## Image creation
+**Note you can also pull the image from docker hub!**
+```bash
+docker pull peteop/locobot_pyrobot
+```
 
 Run the following to create an image:
 
