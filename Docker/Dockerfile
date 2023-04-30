@@ -1,4 +1,4 @@
-FROM osrf/ros-melodic-desktop-full
+FROM osrf/ros:melodic-desktop-full
 
 # Install some basic utilities
 RUN apt-get update && apt-get install -y \
@@ -6,6 +6,14 @@ RUN apt-get update && apt-get install -y \
     git \
     wget \
     vim \
+    && rm -rf /var/lib/apt/lists/*
+
 
 # get pyrobot install script
-RUN cd ~ && git clone 
+RUN cd ~ && git clone https://github.com/peterchenyipu/Pyrobot-Docker.git
+
+RUN cd ~/Pyrobot-Docker/Locobot\ Install\ Script && chmod +x locobot_install_all.sh
+RUN apt-get update
+RUN cd ~/Pyrobot-Docker/Locobot\ Install\ Script && ./locobot_install_all.sh -t full -p 3 -l interbotix
+
+RUN echo "Done"

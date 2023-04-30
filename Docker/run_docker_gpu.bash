@@ -21,7 +21,7 @@ docker run -it \
     --privileged \
     --runtime=nvidia \
     --gpus all \
-    osrf/ros:melodic-desktop-full \
+    locobot_docker \
     bash
 
 echo "Done."

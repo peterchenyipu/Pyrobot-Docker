@@ -16,7 +16,7 @@ docker run -it \
     --volume="$XAUTH:$XAUTH" \
     --net=host \
     --privileged \
-    osrf/ros:melodic-desktop-full \
+    locobot_docker \
     bash
 
 echo "Done."
