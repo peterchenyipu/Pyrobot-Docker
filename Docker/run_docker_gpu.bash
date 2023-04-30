@@ -21,7 +21,7 @@ docker run -it \
     --privileged \
     --runtime=nvidia \
     --gpus all \
-    locobot_docker \
+    peteop/locobot_pyrobot:latest \
     bash
 
 echo "Done."

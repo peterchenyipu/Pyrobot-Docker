@@ -1,19 +1,7 @@
-FROM osrf/ros:melodic-desktop-full
+FROM peteop/locobot_pyrobot:latest
 
-# Install some basic utilities
-RUN apt-get update && apt-get install -y \
-    curl \
-    git \
-    wget \
-    vim \
-    && rm -rf /var/lib/apt/lists/*
+SHELL ["/bin/bash", "-c"]
 
-
-# get pyrobot install script
-RUN cd ~ && git clone https://github.com/peterchenyipu/Pyrobot-Docker.git
-
-RUN cd ~/Pyrobot-Docker/Locobot\ Install\ Script && chmod +x locobot_install_all.sh
-RUN apt-get update
-RUN cd ~/Pyrobot-Docker/Locobot\ Install\ Script && ./locobot_install_all.sh -t full -p 3 -l interbotix
+RUN source ~/.bashrc && source /root/pyenv_pyrobot_python3/bin/activate && source /root/pyrobot_catkin_ws/devel/setup.bash && pip3 install --upgrade --force jupyter-console
 
 RUN echo "Done"
