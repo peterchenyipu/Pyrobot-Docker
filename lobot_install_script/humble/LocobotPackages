@@ -1,0 +1,14 @@
+# List of locobot packages
+
+- [Interbotix ros_core](https://github.com/Interbotix/interbotix_ros_core)
+- [Interbotix ros rovers](https://github.com/Interbotix/interbotix_ros_rovers)
+- [Interbotix ros toolboxes](https://github.com/Interbotix/interbotix_ros_toolboxes)
+- [moveit_visual_tools](https://github.com/ros-planning/moveit_visual_tools.git)
+- [sllidar_ros2](https://github.com/Slamtec/sllidar_ros2.git)
+
+Note manual removal of COLCON_IGNORE of the following packages are needed
+- interbotix_ros_toolboxes/interbotix_perception_toolbox/COLCON_IGNORE
+- interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/COLCON_IGNORE
+- interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface_msgs/COLCON_IGNORE
+
+<!-- TODO: continue reading script on line 371 -->
